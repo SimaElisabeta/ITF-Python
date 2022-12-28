@@ -5,29 +5,13 @@
     * Private -> accesibil doar in clasa (ele se vor nota cu __atribut)
 """
 
-
 class Car:
     __model = 'Dacia'
 
-    def get_model(self):                # getter to obtain the model
+    def get_model(self):                    # getter to obtain the model
         return self.__model
 
-    def set_model(self, new_model):     # setter to update the current model
-        set.__model = new_model
-
-c = Car()
-print(c.get_model())
-# c.set_model('Audi')
-# print(c.get_model)
-
-
-"""
-   __model = 'Dacia'
-
-    def get_model(self):  # getter to obtain the model
-        return self.__model
-
-    def set_model(self, new_model):  # setter to update the current model
+    def set_model(self, new_model):         # setter to update the current model
         self.__model = new_model
 
 
@@ -35,7 +19,7 @@ c = Car()
 print(c.get_model())
 c.set_model('Audi')
 print(c.get_model())
-"""
+
 
 ################################################################################################
 # properties(getter, setter, deleter)
