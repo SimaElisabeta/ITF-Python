@@ -35,7 +35,7 @@ class Car:
 
     @color.getter
     def color(self):
-        print('Getting value')
+        print('Getting values')
         return self.__color
 
     @color.setter
@@ -50,6 +50,6 @@ class Car:
 
 
 c = Car('blue')
-print(c.color)
+print(f'Printeaza culoarea: {c.color}')
 c.color = 'red'
-print(c.color)
+print(f'Printeaza culoarea: {c.color}')
