@@ -1,13 +1,18 @@
 # O clasa abstracta, este o clasa care are cel putin 1 metoda abstracta.
-# O metoda abstracta este o metoda fara corp (apre doar pass in interior, corp = ce este inauntrul functiei).
-# O clasa abstracta nu poate fi instantiata.
-# METODA ESTE FUNCTIA DINTR-O CLASA! DE retinut!!!
+# O metoda abstracta este o metoda fara corp (apre doar pass in interior, corp = interiorul functiei).
+# METODA ESTE FUNCTIA DINTR-O CLASA! de retinut!!!
+# O clasa abstracta nu poate fi instantiata (nu se pot crea obiecte din acceasta clasa, deoarece are metode care
+# nu sunt implementate!).
 
-from abc import abstractmethod, ABC  # Abstract Base Class
+# DE retinut!
+# * Clasa abstracta forteaza anumite comportamente (implementarea unor metode) pentru toate clasele care o mostenesc!
+
+
+from abc import abstractmethod, ABC  # ABC = Abstract Base Class
 
 
 class Animal(ABC):
-    @abstractmethod
+    @abstractmethod  # se va folosi (ca si conventie) decoratorul: @abstractmethod
     def sound(self):
         pass
 
@@ -25,7 +30,6 @@ class Dog(Animal):
 
 
 class Cat(Animal):
-
     def sound(self):
         print('Miau, miau')
 

@@ -1,6 +1,8 @@
 # Polymorphism este conceptul care spune ca poti accesa obiecte de diferite tipuri prin aceeasi interfata
+# (interfata -> in exemplul de jos este clasa Animal care are functia eat, toate clasele vor primi proiprietatea de
+# animal care au functia eat)
 
-from abc import abstractmethod, ABC  # Abstract Base Class
+from abc import abstractmethod, ABC  # ABC = Abstract Base Class
 
 
 class Person:
@@ -10,15 +12,16 @@ class Person:
 
 
 class Creature(ABC):
-
     @abstractmethod
     def eat(self):
         pass
 
 
-class Animal(Creature):
+class Animal(Creature):  # exemplu de polymorphism
     def eat(self):
         return f'I am an eating {self.__class__.__name__}'
+        # aici self.__class__.__name__ va face referire la fiecare clasa care va mosteni clasa Animal
+        # si care va apela metoda eat
 
     def __init__(self, age, weight, species):
         self.age = age
