@@ -6,10 +6,13 @@ from sesiunea8.app.product_repository import ProductRepository
 
 class TestProductRepository(unittest.TestCase):
 
-    def setUp(self):    # se ruleaza automat inaintea fiecarui test case
+    # in unittest exista o functie care creaza un obiect nou inainte de fiecare test case
+    # functia aceasta se numeste: setUp, si face refresh la obiectul nostru: self.repo = ProductRepository()
+    def setUp(self):  # ATENTIE! se ruleaza automat inaintea fiecarui test case
         self.repo = ProductRepository()
+
         # in libraria Pytest pentru a crea o functie de setup
-        # trebuie implementat setup_method
+        # trebuie implementat: setup_method()
 
     def test_get_all(self):
         self.assertEqual(self.repo.get_all(), self.repo.products)
@@ -27,5 +30,5 @@ class TestProductRepository(unittest.TestCase):
         ('Lactate', ['Branza de capra']),
         ('Dulciuri', [])
     ])
-    def test_get_all_by_category(self, category, expected):
-        self.assertEqual(self.repo.get_all_by_category(category), expected)
+    def test_get_all_name_by_category(self, category, expected):
+        self.assertEqual(self.repo.get_all_name_by_category(category), expected)

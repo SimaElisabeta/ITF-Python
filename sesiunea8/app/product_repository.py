@@ -23,7 +23,7 @@ class ProductRepository:
             if product.name == name:
                 return product
 
-    def get_all_by_category(self, category):
+    def get_all_name_by_category(self, category):
         all_name = []
         for product in self.products:
             if product.category == category:

@@ -1,4 +1,4 @@
-# Sa se scrie o functie care primeste ca parametru un intreg si returneaza:
+# 1. Sa se scrie o functie care primeste ca parametru un intreg si returneaza:
 # 35 daca numarul este divizibil cu 3 si cu 5
 # 3 daca este divizibil cu 3
 # 5 daca este divizibil cu 5
@@ -12,7 +12,7 @@ def is_div_3_5(n):
         return 5
 
 
-# sa se scrie o functie care primeste ca parametru o lista si verifica
+# 2. Sa se scrie o functie care primeste ca parametru o lista si verifica
 # daca toate elementele sunt intregi,
 # daca nu, sa se arunce o exceptie custom
 

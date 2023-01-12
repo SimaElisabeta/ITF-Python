@@ -1,6 +1,6 @@
 import unittest
-from sesiunea8.app.func import is_div_3_5, only_ints, NotIntegerNumberException
 from parameterized import parameterized
+from sesiunea8.app.func import is_div_3_5, only_ints, NotIntegerNumberException
 
 
 class TestFunc(unittest.TestCase):
@@ -17,7 +17,8 @@ class TestFunc(unittest.TestCase):
     def test_is_div_3_5_not_div(self):
         self.assertEqual(is_div_3_5(19), None)
 
-    # var2
+    ##
+    # var2 cu functia parametrizata
     @parameterized.expand([
         (45, 35),
         (9, 3),
@@ -26,6 +27,8 @@ class TestFunc(unittest.TestCase):
     ])
     def test_is_div_3_5(self, n, expected):
         self.assertEqual(is_div_3_5(n), expected)
+
+    ##
 
     @parameterized.expand([
         [[1, 3, 8, 1.54, 9, 13]],
