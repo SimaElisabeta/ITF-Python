@@ -28,18 +28,25 @@ class CSVMarketplaceRepository(AbstractMarketplaceRepository):
         self.data = None
 
     def read(self):
-        if self.data:
+        if self.data:  # checks if the data attribute is set and will return the data
             return self.data
+        # else if the data is not set than it will open the specified file 'file_name' in read mode
+        # and reads the data in the file using the 'csv.reader'.
+        # In the end, all data that has been read will be assigned to data attribute and returned
         with open(self.file_name, "r") as f:
             reader = csv.reader(f)
             self.data = list(reader)
-        return self.data
+            return self.data
 
     def add(self, entity):
-        with open(self.file_name, "a", newline='') as f:
+        with open(self.file_name, "a", newline='') as f:  # opens the file with 'a' - append mode
             writer = csv.writer(f)
             writer.writerow(entity)
             self.data = None  # invalidam datele locale pentru ca s-a modificat fisierul
+            # 1. self.data = None - determina faptul ca datele noastre nu sunt actualizate iar cand vom folosi functia
+            # read() acesta va merge direct catre open si va citi(+ va salva in read mode) fisierul actualizat
+            # 2. daca nu invalidam datele atunci cand vom incerca sa citim ce este in fisier, functia read()
+            # ne va returna doar datele care erau inainte de a modifica/adauga in fisier
 
     def delete(self, entity_id):
         self.data = self.read()

@@ -14,9 +14,9 @@ def choose_db():
     file_type = 'csv' if cmd == 1 else 'json'
     file_name = f'Users.{file_type}'
     return (
-               CSVMarketplaceRepository(file_name)
-               if file_type == 'csv' else JSONMarketplaceRepository(
-                   file_name)), file_type
+               CSVMarketplaceRepository(file_name) if file_type == 'csv'
+               else JSONMarketplaceRepository(file_name)
+           ), file_type
 
 
 def print_menu():
