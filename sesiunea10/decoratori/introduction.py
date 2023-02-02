@@ -37,9 +37,11 @@ print()
 def parent(num):
     def first_child():
         print('Printing from first_child() function ')
+        return 'function first_child() return'
 
     def second_child():
         print('Printing from second_child() function ')
+        return 'function second_child() return'
 
     if num == 1:
         return first_child
@@ -47,6 +49,7 @@ def parent(num):
         return second_child
 
 
-f = parent(1)       # f -> referinta catre functia first_child()
-print(type(f))      # f este o functie
-f()                 # f() -> va apelia functia first_child()
+print(f'Referinta catre return din functia parent: {parent(1)}')  # returneaza referinta catre fuctia 1 => first_child() function
+f = parent(1)  # f -> salvam intr-o variabila referinta catre functia first_child()
+print(type(f))  # f este o functie
+f()  # f() -> va apelia functia first_child()

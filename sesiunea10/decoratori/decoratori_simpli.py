@@ -11,7 +11,7 @@ def my_decorator(func):
     return wrapper
 
 
-@my_decorator  # sintactic sugar - pentru: say_hello = my_decorator(say_hello)
+@my_decorator  # sintactic sugar => say_hello = my_decorator(say_hello)
 def say_hello():
     print('Hello')
 
