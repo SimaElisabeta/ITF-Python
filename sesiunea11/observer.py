@@ -1,17 +1,17 @@
-'''
+"""
 Observer - is a behavioral design pattern that lets you define a subscription mechanism to notify multiple object
-             about any events that happened to the object they are observing
-'''
+about any events that happened to the object they are observing
+"""
 from abc import ABC, abstractmethod
 
 
-class Observer(ABC):  # mai multi
+class Observer(ABC):  # Observatorul (sunt cei care se uita) - pot fi mai multi
     @abstractmethod
     def update(self, observable):
         pass
 
 
-class Observable(ABC):  # unul singur
+class Observable(ABC):  # Observabilul (este obiectul la care se uita) - de obiecei este unul singur
     @abstractmethod
     def register_observer(self, observer):
         pass
@@ -66,9 +66,9 @@ subject.register_observer(b)
 subject.message = 'Ana are mere!'
 subject.message = 'BWM este o masina tare!'
 
-'''
+"""
 PROS:
-    - you can establish relations between objects at runtime(when the code is executed)
+    - you can establish relations between objects at runtime (when the code is executed)
 CONS:
     - subscribers are notified in random order
-'''
+"""

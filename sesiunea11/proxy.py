@@ -1,8 +1,8 @@
-'''
+"""
 PROXY - is a structural design pattern that lets you provide a substitute or a placeholder for another object.
-A proxy controls access to the original object allowing you to perform something either before or after
-     the request gets through to the original object
-'''
+A proxy controls access to the original object allowing you to perform something either before or after the
+request gets through to the original object
+"""
 
 from abc import ABC, abstractmethod
 
@@ -27,11 +27,11 @@ class Proxy(Subject):
     def __init__(self, real_subject):
         self._real_subject = real_subject
 
-    def check_access(self):
+    def check_access(self) -> bool:
         print('Proxy: checking access!')
         return True
 
-    def log_access(self):
+    def log_access(self) -> None:
         print('Proxy: logging the time of the request!')
 
 
@@ -41,7 +41,7 @@ print('*' * 80)
 proxy = Proxy(real_subject)
 proxy.request()
 
-'''
+"""
 PROS:
     - you can control the subject object without anyone knowing about it
     - you can manage the live cycle of the subject object 
@@ -49,4 +49,4 @@ PROS:
 CONS:
     - the code may become more complicated since you need to introduce a lot of new classes
     - the response from the subject might get delayed 
-'''
+"""
