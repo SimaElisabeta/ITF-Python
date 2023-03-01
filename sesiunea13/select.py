@@ -3,6 +3,7 @@ from pprint import pprint
 
 con = sqlite3.connect("students.db")
 cursor = con.cursor()
+
 print('*' * 50)
 cursor.execute("SELECT * FROM Students")
 # pprint(cursor.fetchall())
