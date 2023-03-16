@@ -6,8 +6,22 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{pet.name}}</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'details.css' %}">
 </head>
 <body>
-{{pet}}
+<div class="pets-details">
+    <h2>Name: {{pet.name}}</h2>
+    <div class="paw-icon">
+        <i class="fa fa-paw" style="font-size:48px;color:red">🐾</i>
+    </div>
+
+    <h3>Gender: {{pet.gender}}</h3>
+    <h3>Location: {{pet.location}}</h3>
+    <h3>Species: {{pet.species}}</h3>
+    <input type="submit" class="adoption-btn" value="Adopt {{pet.name}}">
+    <i class="fa-solid fa-heart">❤</i>
+</div>
 </body>
 </html>

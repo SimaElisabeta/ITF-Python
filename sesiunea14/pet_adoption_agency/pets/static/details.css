@@ -1,0 +1,44 @@
+.pets-details {
+    padding: 30px;
+    border-radius:10px;
+    padding: 10px;
+    margin:30px 100px 30px 100px;
+    background-color: white;
+}
+
+body {
+  background-color: lightblue;
+}
+
+.paw-icon:hover {
+    background-color:white;
+    scale:0.8;
+    transition:0.5s scale;
+}
+
+
+
+.adoption-btn {
+  display: inline-block;
+  background-color: #F44336;
+  color: #FFF;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.adoption-btn:hover {
+  background-color: #FFF;
+  color: #F44336;
+  border: 2px solid #F44336;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3), 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+
